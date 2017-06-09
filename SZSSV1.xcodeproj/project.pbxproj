@@ -10,7 +10,6 @@
 		5349CD90EB931172399CE2A8 /* libPods-SZSSV1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 043250C598911707E7E9F658 /* libPods-SZSSV1.a */; };
 		AD600F411E8CDF8A00E55D5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F401E8CDF8A00E55D5B /* main.m */; };
 		AD600F441E8CDF8A00E55D5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F431E8CDF8A00E55D5B /* AppDelegate.m */; };
-		AD600F4A1E8CDF8A00E55D5B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD600F481E8CDF8A00E55D5B /* Main.storyboard */; };
 		AD600F4C1E8CDF8A00E55D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD600F4B1E8CDF8A00E55D5B /* Assets.xcassets */; };
 		AD600F7E1E8E4B1100E55D5B /* SSNetEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F7D1E8E4B1100E55D5B /* SSNetEngine.m */; };
 		AD600F851E8E5D6E00E55D5B /* SSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F841E8E5D6E00E55D5B /* SSObject.m */; };
@@ -104,7 +103,6 @@
 		AD600F401E8CDF8A00E55D5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD600F421E8CDF8A00E55D5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AD600F431E8CDF8A00E55D5B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AD600F491E8CDF8A00E55D5B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AD600F4B1E8CDF8A00E55D5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD600F501E8CDF8A00E55D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD600F7C1E8E4B1100E55D5B /* SSNetEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNetEngine.h; sourceTree = "<group>"; };
@@ -263,7 +261,6 @@
 				AD600F711E8E38A100E55D5B /* ViewController */,
 				AD600F421E8CDF8A00E55D5B /* AppDelegate.h */,
 				AD600F431E8CDF8A00E55D5B /* AppDelegate.m */,
-				AD600F481E8CDF8A00E55D5B /* Main.storyboard */,
 				AD600F4B1E8CDF8A00E55D5B /* Assets.xcassets */,
 				AD600F501E8CDF8A00E55D5B /* Info.plist */,
 				AD600F3F1E8CDF8A00E55D5B /* Supporting Files */,
@@ -746,7 +743,6 @@
 				ADDA83521EE0FE4600A53204 /* tab_shouye_light@3x.png in Resources */,
 				ADC9D99E1EE6A3920030C230 /* heartNomal@2x.png in Resources */,
 				ADFBADB31EBAC04A0037AABB /* mycity_highlight@2x.png in Resources */,
-				AD600F4A1E8CDF8A00E55D5B /* Main.storyboard in Resources */,
 				ADDA83491EE0FE4600A53204 /* tab_faxian@2x.png in Resources */,
 				ADDA83261EE01FCC00A53204 /* Default-736h@3x.png in Resources */,
 			);
@@ -834,17 +830,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		AD600F481E8CDF8A00E55D5B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				AD600F491E8CDF8A00E55D5B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		AD600F511E8CDF8A00E55D5B /* Debug */ = {
