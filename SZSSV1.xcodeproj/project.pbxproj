@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		5349CD90EB931172399CE2A8 /* libPods-SZSSV1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 043250C598911707E7E9F658 /* libPods-SZSSV1.a */; };
-		AD600F411E8CDF8A00E55D5B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F401E8CDF8A00E55D5B /* main.m */; };
-		AD600F441E8CDF8A00E55D5B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F431E8CDF8A00E55D5B /* AppDelegate.m */; };
-		AD600F4C1E8CDF8A00E55D5B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD600F4B1E8CDF8A00E55D5B /* Assets.xcassets */; };
+		AD590BF41EEB993700073E8B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AD590BF01EEB993700073E8B /* AppDelegate.m */; };
+		AD590BF51EEB993700073E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD590BF11EEB993700073E8B /* Assets.xcassets */; };
+		AD590BF61EEB993700073E8B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD590BF21EEB993700073E8B /* Info.plist */; };
+		AD590BF71EEB993700073E8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD590BF31EEB993700073E8B /* main.m */; };
 		AD600F7E1E8E4B1100E55D5B /* SSNetEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F7D1E8E4B1100E55D5B /* SSNetEngine.m */; };
 		AD600F851E8E5D6E00E55D5B /* SSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F841E8E5D6E00E55D5B /* SSObject.m */; };
 		AD600F8F1E8F403400E55D5B /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F8E1E8F403400E55D5B /* Product.m */; };
@@ -99,12 +100,12 @@
 		043250C598911707E7E9F658 /* libPods-SZSSV1.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SZSSV1.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		068671D2AE7B7E9C851B056D /* Pods-SZSSV1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZSSV1.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SZSSV1/Pods-SZSSV1.debug.xcconfig"; sourceTree = "<group>"; };
 		9A329ACA74BE37ADBFB0E020 /* Pods-SZSSV1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SZSSV1.release.xcconfig"; path = "Pods/Target Support Files/Pods-SZSSV1/Pods-SZSSV1.release.xcconfig"; sourceTree = "<group>"; };
+		AD590BEF1EEB993700073E8B /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AD590BF01EEB993700073E8B /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AD590BF11EEB993700073E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AD590BF21EEB993700073E8B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AD590BF31EEB993700073E8B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AD600F3C1E8CDF8A00E55D5B /* SZSSV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZSSV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD600F401E8CDF8A00E55D5B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AD600F421E8CDF8A00E55D5B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		AD600F431E8CDF8A00E55D5B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AD600F4B1E8CDF8A00E55D5B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		AD600F501E8CDF8A00E55D5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD600F7C1E8E4B1100E55D5B /* SSNetEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNetEngine.h; sourceTree = "<group>"; };
 		AD600F7D1E8E4B1100E55D5B /* SSNetEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSNetEngine.m; sourceTree = "<group>"; };
 		AD600F831E8E5D6E00E55D5B /* SSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSObject.h; sourceTree = "<group>"; };
@@ -231,6 +232,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AD590BEE1EEB993700073E8B /* System */ = {
+			isa = PBXGroup;
+			children = (
+				AD590BEF1EEB993700073E8B /* AppDelegate.h */,
+				AD590BF01EEB993700073E8B /* AppDelegate.m */,
+				AD590BF11EEB993700073E8B /* Assets.xcassets */,
+				AD590BF21EEB993700073E8B /* Info.plist */,
+				AD590BF31EEB993700073E8B /* main.m */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
 		AD600F331E8CDF8900E55D5B = {
 			isa = PBXGroup;
 			children = (
@@ -252,6 +265,7 @@
 		AD600F3E1E8CDF8A00E55D5B /* SZSSV1 */ = {
 			isa = PBXGroup;
 			children = (
+				AD590BEE1EEB993700073E8B /* System */,
 				AD600F791E8E38D100E55D5B /* Resource */,
 				AD600F671E8DFEDD00E55D5B /* Lib */,
 				AD600F6A1E8E38A100E55D5B /* Model */,
@@ -259,21 +273,8 @@
 				AD600F6C1E8E38A100E55D5B /* Util */,
 				AD600F701E8E38A100E55D5B /* View */,
 				AD600F711E8E38A100E55D5B /* ViewController */,
-				AD600F421E8CDF8A00E55D5B /* AppDelegate.h */,
-				AD600F431E8CDF8A00E55D5B /* AppDelegate.m */,
-				AD600F4B1E8CDF8A00E55D5B /* Assets.xcassets */,
-				AD600F501E8CDF8A00E55D5B /* Info.plist */,
-				AD600F3F1E8CDF8A00E55D5B /* Supporting Files */,
 			);
 			path = SZSSV1;
-			sourceTree = "<group>";
-		};
-		AD600F3F1E8CDF8A00E55D5B /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				AD600F401E8CDF8A00E55D5B /* main.m */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		AD600F671E8DFEDD00E55D5B /* Lib */ = {
@@ -703,10 +704,12 @@
 				ADDA83561EE0FE4600A53204 /* tab_wode_light@3x.png in Resources */,
 				ADDA834D1EE0FE4600A53204 /* tab_m@2x.png in Resources */,
 				ADDA83571EE0FE4600A53204 /* tab_wode@2x.png in Resources */,
+				AD590BF61EEB993700073E8B /* Info.plist in Resources */,
 				ADDA834A1EE0FE4600A53204 /* tab_faxian@3x.png in Resources */,
 				ADDA834C1EE0FE4600A53204 /* tab_i@3x.png in Resources */,
 				ADC9D9A31EE6A3920030C230 /* messageNomal@3x.png in Resources */,
 				ADC9D99F1EE6A3920030C230 /* heartNomal@3x.png in Resources */,
+				AD590BF51EEB993700073E8B /* Assets.xcassets in Resources */,
 				ADDA83AA1EE5685800A53204 /* dateCell@3x.png in Resources */,
 				AD6A47201ED2B8F0005B9A96 /* navigationbar_background_tall@2x.png in Resources */,
 				ADDA834B1EE0FE4600A53204 /* tab_i@2x.png in Resources */,
@@ -728,7 +731,6 @@
 				ADDA83451EE0FE4600A53204 /* tab_f@2x.png in Resources */,
 				ADDA831A1EE013B300A53204 /* load2.png in Resources */,
 				ADC9D9A11EE6A3920030C230 /* messageLight@3x.png in Resources */,
-				AD600F4C1E8CDF8A00E55D5B /* Assets.xcassets in Resources */,
 				ADC9D9931EE656D50030C230 /* titleLine@3x.png in Resources */,
 				ADDA834E1EE0FE4600A53204 /* tab_m@3x.png in Resources */,
 				ADDA83241EE01FCC00A53204 /* Default-568h@2x.png in Resources */,
@@ -803,6 +805,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD590BF41EEB993700073E8B /* AppDelegate.m in Sources */,
 				ADDA837A1EE2584D00A53204 /* SSBaseNavigationController.m in Sources */,
 				ADDA83991EE2678300A53204 /* DataManager.m in Sources */,
 				ADDA839A1EE2678300A53204 /* MenuInfo.m in Sources */,
@@ -812,6 +815,7 @@
 				ADDA83811EE2586A00A53204 /* MessageViewController.m in Sources */,
 				ADDA837B1EE2584D00A53204 /* SSBaseViewController.m in Sources */,
 				AD6A474F1ED2CFC0005B9A96 /* SRNewFeaturesViewController.m in Sources */,
+				AD590BF71EEB993700073E8B /* main.m in Sources */,
 				ADDA83A01EE28C4A00A53204 /* ShopListViewController.m in Sources */,
 				AD600F8F1E8F403400E55D5B /* Product.m in Sources */,
 				ADDA838D1EE2666C00A53204 /* SSBaseTableViewController.m in Sources */,
@@ -822,9 +826,7 @@
 				ADFBAD9D1EB9DACA0037AABB /* CYLTabBarControllerConfig.m in Sources */,
 				ADFBADA01EB9DADA0037AABB /* CYLPlusButtonSubclass.m in Sources */,
 				AD600F951E8F40E400E55D5B /* SSUtil.m in Sources */,
-				AD600F441E8CDF8A00E55D5B /* AppDelegate.m in Sources */,
 				ADDA83871EE2587B00A53204 /* FindViewController.m in Sources */,
-				AD600F411E8CDF8A00E55D5B /* main.m in Sources */,
 				ADDA837E1EE2586000A53204 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -927,7 +929,7 @@
 			baseConfigurationReference = 068671D2AE7B7E9C851B056D /* Pods-SZSSV1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SZSSV1/Info.plist;
+				INFOPLIST_FILE = SZSSV1/System/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.szss.testweex.SZSSV1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -939,7 +941,7 @@
 			baseConfigurationReference = 9A329ACA74BE37ADBFB0E020 /* Pods-SZSSV1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = SZSSV1/Info.plist;
+				INFOPLIST_FILE = SZSSV1/System/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.szss.testweex.SZSSV1;
 				PRODUCT_NAME = "$(TARGET_NAME)";

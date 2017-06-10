@@ -12,6 +12,7 @@
 #import "CYLPlusButtonSubclass.h"
 #import "SRNewFeaturesViewController.h"
 #import "SSConfig.h"
+#import <AFNetworking.h>
 
 @interface AppDelegate ()
 
@@ -53,9 +54,38 @@
     [self monitorNetworkStatus];
     
     
-    NSLog(@"familyNames：%@",[UIFont familyNames]);
+    [self login];
+    
+//    NSLog(@"familyNames：%@",[UIFont familyNames]);
     
     return YES;
+}
+
+-(void)login {
+    
+//    NSDictionary *dict = [requestObject objectAsDictionary];
+    NSString *url = @"http://localhost:8080/moxi-0.0.1-SNAPSHOT/app/login1?userName=xxx&password=123456";
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    [manager GET:url parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        
+        NSLog(@"%@",responseObject);
+        
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        
+    }];
+    
+    
+    
+//    [manager POST:url parameters:dict progress:nil success:^(NSURLSessionDataTask *task, id responseObject) {
+//        ProductList *plist = [[ProductList alloc]initWithDictionary:responseObject];
+//        NSLog(@"%@",plist.description);
+//        successBlock(plist);
+//    } failure:^(NSURLSessionDataTask *task, NSError *error) {
+//        NSLog(@"%@",error.description);
+//        failureBlock(error.description);
+//    }];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {
