@@ -12,9 +12,11 @@
 		AD590BF51EEB993700073E8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD590BF11EEB993700073E8B /* Assets.xcassets */; };
 		AD590BF61EEB993700073E8B /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AD590BF21EEB993700073E8B /* Info.plist */; };
 		AD590BF71EEB993700073E8B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AD590BF31EEB993700073E8B /* main.m */; };
-		AD600F7E1E8E4B1100E55D5B /* SSNetEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F7D1E8E4B1100E55D5B /* SSNetEngine.m */; };
-		AD600F851E8E5D6E00E55D5B /* SSObject.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F841E8E5D6E00E55D5B /* SSObject.m */; };
-		AD600F8F1E8F403400E55D5B /* Product.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F8E1E8F403400E55D5B /* Product.m */; };
+		AD590BFD1EEBD52300073E8B /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD590BFA1EEBD52300073E8B /* DataManager.m */; };
+		AD590BFE1EEBD52300073E8B /* MenuInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = AD590BFC1EEBD52300073E8B /* MenuInfo.m */; };
+		AD590C021EEBD5F500073E8B /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = AD590C011EEBD5F500073E8B /* CYLPlusButtonSubclass.m */; };
+		AD590C051EEBD9DE00073E8B /* SSNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = AD590C041EEBD9DE00073E8B /* SSNetworkingManager.m */; };
+		AD590C0C1EEBE35E00073E8B /* SSImageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AD590C0B1EEBE35E00073E8B /* SSImageModel.m */; };
 		AD600F951E8F40E400E55D5B /* SSUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = AD600F941E8F40E400E55D5B /* SSUtil.m */; };
 		AD6A47201ED2B8F0005B9A96 /* navigationbar_background_tall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AD6A471F1ED2B8F0005B9A96 /* navigationbar_background_tall@2x.png */; };
 		AD6A474F1ED2CFC0005B9A96 /* SRNewFeaturesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD6A474E1ED2CFBF005B9A96 /* SRNewFeaturesViewController.m */; };
@@ -75,14 +77,11 @@
 		ADDA838D1EE2666C00A53204 /* SSBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA838C1EE2666C00A53204 /* SSBaseTableViewController.m */; };
 		ADDA83901EE2668700A53204 /* SSBaseCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA838F1EE2668700A53204 /* SSBaseCollectionViewController.m */; };
 		ADDA83931EE266AD00A53204 /* LoveListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA83921EE266AD00A53204 /* LoveListViewController.m */; };
-		ADDA83991EE2678300A53204 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA83961EE2678300A53204 /* DataManager.m */; };
-		ADDA839A1EE2678300A53204 /* MenuInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA83981EE2678300A53204 /* MenuInfo.m */; };
 		ADDA83A01EE28C4A00A53204 /* ShopListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA839F1EE28C4A00A53204 /* ShopListViewController.m */; };
 		ADDA83A31EE2A34B00A53204 /* LoveTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDA83A21EE2A34B00A53204 /* LoveTableViewCell.m */; };
 		ADDA83A91EE5685800A53204 /* dateCell@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDA83A71EE5685800A53204 /* dateCell@2x.png */; };
 		ADDA83AA1EE5685800A53204 /* dateCell@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADDA83A81EE5685800A53204 /* dateCell@3x.png */; };
 		ADFBAD9D1EB9DACA0037AABB /* CYLTabBarControllerConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBAD9C1EB9DACA0037AABB /* CYLTabBarControllerConfig.m */; };
-		ADFBADA01EB9DADA0037AABB /* CYLPlusButtonSubclass.m in Sources */ = {isa = PBXBuildFile; fileRef = ADFBAD9F1EB9DADA0037AABB /* CYLPlusButtonSubclass.m */; };
 		ADFBADAD1EBAC04A0037AABB /* account_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADFBADA21EBAC04A0037AABB /* account_highlight@2x.png */; };
 		ADFBADAE1EBAC04A0037AABB /* account_normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADFBADA31EBAC04A0037AABB /* account_normal@2x.png */; };
 		ADFBADAF1EBAC04A0037AABB /* home_highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = ADFBADA41EBAC04A0037AABB /* home_highlight@2x.png */; };
@@ -105,13 +104,17 @@
 		AD590BF11EEB993700073E8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AD590BF21EEB993700073E8B /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD590BF31EEB993700073E8B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AD590BF91EEBD52300073E8B /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		AD590BFA1EEBD52300073E8B /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		AD590BFB1EEBD52300073E8B /* MenuInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuInfo.h; sourceTree = "<group>"; };
+		AD590BFC1EEBD52300073E8B /* MenuInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuInfo.m; sourceTree = "<group>"; };
+		AD590C001EEBD5F500073E8B /* CYLPlusButtonSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLPlusButtonSubclass.h; sourceTree = "<group>"; };
+		AD590C011EEBD5F500073E8B /* CYLPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLPlusButtonSubclass.m; sourceTree = "<group>"; };
+		AD590C031EEBD9DE00073E8B /* SSNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNetworkingManager.h; sourceTree = "<group>"; };
+		AD590C041EEBD9DE00073E8B /* SSNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSNetworkingManager.m; sourceTree = "<group>"; };
+		AD590C0A1EEBE35E00073E8B /* SSImageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSImageModel.h; sourceTree = "<group>"; };
+		AD590C0B1EEBE35E00073E8B /* SSImageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSImageModel.m; sourceTree = "<group>"; };
 		AD600F3C1E8CDF8A00E55D5B /* SZSSV1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SZSSV1.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD600F7C1E8E4B1100E55D5B /* SSNetEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSNetEngine.h; sourceTree = "<group>"; };
-		AD600F7D1E8E4B1100E55D5B /* SSNetEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSNetEngine.m; sourceTree = "<group>"; };
-		AD600F831E8E5D6E00E55D5B /* SSObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSObject.h; sourceTree = "<group>"; };
-		AD600F841E8E5D6E00E55D5B /* SSObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSObject.m; sourceTree = "<group>"; };
-		AD600F8D1E8F403400E55D5B /* Product.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Product.h; sourceTree = "<group>"; };
-		AD600F8E1E8F403400E55D5B /* Product.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Product.m; sourceTree = "<group>"; };
 		AD600F901E8F40BF00E55D5B /* SSConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSConfig.h; sourceTree = "<group>"; };
 		AD600F931E8F40E400E55D5B /* SSUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSUtil.h; sourceTree = "<group>"; };
 		AD600F941E8F40E400E55D5B /* SSUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSUtil.m; sourceTree = "<group>"; };
@@ -185,10 +188,6 @@
 		ADDA838F1EE2668700A53204 /* SSBaseCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSBaseCollectionViewController.m; sourceTree = "<group>"; };
 		ADDA83911EE266AD00A53204 /* LoveListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoveListViewController.h; sourceTree = "<group>"; };
 		ADDA83921EE266AD00A53204 /* LoveListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoveListViewController.m; sourceTree = "<group>"; };
-		ADDA83951EE2678300A53204 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
-		ADDA83961EE2678300A53204 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
-		ADDA83971EE2678300A53204 /* MenuInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuInfo.h; sourceTree = "<group>"; };
-		ADDA83981EE2678300A53204 /* MenuInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuInfo.m; sourceTree = "<group>"; };
 		ADDA839E1EE28C4A00A53204 /* ShopListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShopListViewController.h; sourceTree = "<group>"; };
 		ADDA839F1EE28C4A00A53204 /* ShopListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShopListViewController.m; sourceTree = "<group>"; };
 		ADDA83A11EE2A34B00A53204 /* LoveTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoveTableViewCell.h; sourceTree = "<group>"; };
@@ -197,8 +196,6 @@
 		ADDA83A81EE5685800A53204 /* dateCell@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dateCell@3x.png"; sourceTree = "<group>"; };
 		ADFBAD9B1EB9DACA0037AABB /* CYLTabBarControllerConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLTabBarControllerConfig.h; sourceTree = "<group>"; };
 		ADFBAD9C1EB9DACA0037AABB /* CYLTabBarControllerConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLTabBarControllerConfig.m; sourceTree = "<group>"; };
-		ADFBAD9E1EB9DADA0037AABB /* CYLPlusButtonSubclass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CYLPlusButtonSubclass.h; sourceTree = "<group>"; };
-		ADFBAD9F1EB9DADA0037AABB /* CYLPlusButtonSubclass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CYLPlusButtonSubclass.m; sourceTree = "<group>"; };
 		ADFBADA21EBAC04A0037AABB /* account_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "account_highlight@2x.png"; sourceTree = "<group>"; };
 		ADFBADA31EBAC04A0037AABB /* account_normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "account_normal@2x.png"; sourceTree = "<group>"; };
 		ADFBADA41EBAC04A0037AABB /* home_highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "home_highlight@2x.png"; sourceTree = "<group>"; };
@@ -242,6 +239,35 @@
 				AD590BF31EEB993700073E8B /* main.m */,
 			);
 			path = System;
+			sourceTree = "<group>";
+		};
+		AD590BF81EEBD52300073E8B /* VTMagicMenu */ = {
+			isa = PBXGroup;
+			children = (
+				AD590BF91EEBD52300073E8B /* DataManager.h */,
+				AD590BFA1EEBD52300073E8B /* DataManager.m */,
+				AD590BFB1EEBD52300073E8B /* MenuInfo.h */,
+				AD590BFC1EEBD52300073E8B /* MenuInfo.m */,
+			);
+			path = VTMagicMenu;
+			sourceTree = "<group>";
+		};
+		AD590BFF1EEBD5F500073E8B /* CYLTabBarButton */ = {
+			isa = PBXGroup;
+			children = (
+				AD590C001EEBD5F500073E8B /* CYLPlusButtonSubclass.h */,
+				AD590C011EEBD5F500073E8B /* CYLPlusButtonSubclass.m */,
+			);
+			path = CYLTabBarButton;
+			sourceTree = "<group>";
+		};
+		AD590C061EEBE25200073E8B /* FileModel */ = {
+			isa = PBXGroup;
+			children = (
+				AD590C0A1EEBE35E00073E8B /* SSImageModel.h */,
+				AD590C0B1EEBE35E00073E8B /* SSImageModel.m */,
+			);
+			path = FileModel;
 			sourceTree = "<group>";
 		};
 		AD600F331E8CDF8900E55D5B = {
@@ -288,9 +314,8 @@
 		AD600F6A1E8E38A100E55D5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				ADDA83941EE2678300A53204 /* Menu */,
-				AD600F891E8F3FB400E55D5B /* Product */,
-				AD600F821E8E5D6E00E55D5B /* Base */,
+				AD590C061EEBE25200073E8B /* FileModel */,
+				AD590BF81EEBD52300073E8B /* VTMagicMenu */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -298,8 +323,8 @@
 		AD600F6B1E8E38A100E55D5B /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				AD600F7C1E8E4B1100E55D5B /* SSNetEngine.h */,
-				AD600F7D1E8E4B1100E55D5B /* SSNetEngine.m */,
+				AD590C031EEBD9DE00073E8B /* SSNetworkingManager.h */,
+				AD590C041EEBD9DE00073E8B /* SSNetworkingManager.m */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -343,8 +368,7 @@
 		AD600F701E8E38A100E55D5B /* View */ = {
 			isa = PBXGroup;
 			children = (
-				ADFBAD9E1EB9DADA0037AABB /* CYLPlusButtonSubclass.h */,
-				ADFBAD9F1EB9DADA0037AABB /* CYLPlusButtonSubclass.m */,
+				AD590BFF1EEBD5F500073E8B /* CYLTabBarButton */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -372,24 +396,6 @@
 				ADFBADA11EBAC04A0037AABB /* TabBar */,
 			);
 			path = Resource;
-			sourceTree = "<group>";
-		};
-		AD600F821E8E5D6E00E55D5B /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				AD600F831E8E5D6E00E55D5B /* SSObject.h */,
-				AD600F841E8E5D6E00E55D5B /* SSObject.m */,
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		AD600F891E8F3FB400E55D5B /* Product */ = {
-			isa = PBXGroup;
-			children = (
-				AD600F8D1E8F403400E55D5B /* Product.h */,
-				AD600F8E1E8F403400E55D5B /* Product.m */,
-			);
-			path = Product;
 			sourceTree = "<group>";
 		};
 		AD6A474C1ED2CFBF005B9A96 /* SRNewFeatures */ = {
@@ -534,17 +540,6 @@
 			children = (
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		ADDA83941EE2678300A53204 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				ADDA83951EE2678300A53204 /* DataManager.h */,
-				ADDA83961EE2678300A53204 /* DataManager.m */,
-				ADDA83971EE2678300A53204 /* MenuInfo.h */,
-				ADDA83981EE2678300A53204 /* MenuInfo.m */,
-			);
-			path = Menu;
 			sourceTree = "<group>";
 		};
 		ADDA83A41EE2B3BF00A53204 /* Home */ = {
@@ -805,26 +800,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD590BFE1EEBD52300073E8B /* MenuInfo.m in Sources */,
 				AD590BF41EEB993700073E8B /* AppDelegate.m in Sources */,
 				ADDA837A1EE2584D00A53204 /* SSBaseNavigationController.m in Sources */,
-				ADDA83991EE2678300A53204 /* DataManager.m in Sources */,
-				ADDA839A1EE2678300A53204 /* MenuInfo.m in Sources */,
+				AD590C051EEBD9DE00073E8B /* SSNetworkingManager.m in Sources */,
 				ADDA83841EE2587200A53204 /* MineViewController.m in Sources */,
 				ADDA83A31EE2A34B00A53204 /* LoveTableViewCell.m in Sources */,
-				AD600F851E8E5D6E00E55D5B /* SSObject.m in Sources */,
 				ADDA83811EE2586A00A53204 /* MessageViewController.m in Sources */,
 				ADDA837B1EE2584D00A53204 /* SSBaseViewController.m in Sources */,
 				AD6A474F1ED2CFC0005B9A96 /* SRNewFeaturesViewController.m in Sources */,
 				AD590BF71EEB993700073E8B /* main.m in Sources */,
+				AD590BFD1EEBD52300073E8B /* DataManager.m in Sources */,
 				ADDA83A01EE28C4A00A53204 /* ShopListViewController.m in Sources */,
-				AD600F8F1E8F403400E55D5B /* Product.m in Sources */,
 				ADDA838D1EE2666C00A53204 /* SSBaseTableViewController.m in Sources */,
 				ADDA83901EE2668700A53204 /* SSBaseCollectionViewController.m in Sources */,
-				AD600F7E1E8E4B1100E55D5B /* SSNetEngine.m in Sources */,
 				ADDA838A1EE2588700A53204 /* SendViewController.m in Sources */,
+				AD590C021EEBD5F500073E8B /* CYLPlusButtonSubclass.m in Sources */,
 				ADDA83931EE266AD00A53204 /* LoveListViewController.m in Sources */,
+				AD590C0C1EEBE35E00073E8B /* SSImageModel.m in Sources */,
 				ADFBAD9D1EB9DACA0037AABB /* CYLTabBarControllerConfig.m in Sources */,
-				ADFBADA01EB9DADA0037AABB /* CYLPlusButtonSubclass.m in Sources */,
 				AD600F951E8F40E400E55D5B /* SSUtil.m in Sources */,
 				ADDA83871EE2587B00A53204 /* FindViewController.m in Sources */,
 				ADDA837E1EE2586000A53204 /* HomeViewController.m in Sources */,

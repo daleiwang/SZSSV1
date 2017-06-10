@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
+#define BASE_URL @"http://localhost:8080/moxi-0.0.1-SNAPSHOT/"
+
+
+
+
 //日志打印
 #ifdef DEBUG
 #define SSLog(...) NSLog(@"%s 第%d行 \n %@\n\n",__func__,__LINE__,[NSString stringWithFormat:__VA_ARGS__])
@@ -15,11 +20,23 @@
 #define SSLog(...)
 #endif
 
+//声明非空
+#define NS_ASSUME_NONNULL_BEGIN _Pragma("clang assume_nonnull begin")
+#define NS_ASSUME_NONNULL_END   _Pragma("clang assume_nonnull end")
+
+
 //屏幕宽高
 #define SCREEN_WIDTH   [UIScreen mainScreen].bounds.size.width
 #define SCREENH_HEIGHT [UIScreen mainScreen].bounds.size.height
+
+
 //通知中心
 #define SSNotificationCenter [NSNotificationCenter defaultCenter]
+
+
+
+
+
 
 //RGB颜色
 #define SSRGBColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
