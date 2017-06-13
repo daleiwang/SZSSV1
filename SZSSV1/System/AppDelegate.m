@@ -12,7 +12,9 @@
 #import "CYLPlusButtonSubclass.h"
 #import "SRNewFeaturesViewController.h"
 #import "SSConfig.h"
+#import "SSImageModel.h"
 #import "SSNetworkingManager.h"
+#import "TestNetworkViewController.h"
 
 @interface AppDelegate ()
 
@@ -29,22 +31,29 @@
     self.window.frame = [UIScreen mainScreen].bounds;
     
     //TabBar初始化
-    [CYLPlusButtonSubclass registerPlusButton];
-    CYLTabBarControllerConfig *tabBarControllerConfig = [[CYLTabBarControllerConfig alloc] init];
+//    [CYLPlusButtonSubclass registerPlusButton];
+//    CYLTabBarControllerConfig *tabBarControllerConfig = [[CYLTabBarControllerConfig alloc] init];
     
     
 //    if ([SRNewFeaturesViewController sr_shouldShowNewFeature]) {
-        NSArray *imageNames = @[@"load1.png", @"load2.png", @"load3.png"];
-        SRNewFeaturesViewController *newFeaturesVC = [SRNewFeaturesViewController sr_newFeatureWithImageNames:imageNames
-                                                                                           rootViewController:tabBarControllerConfig.tabBarController];
-        newFeaturesVC.hideSkipButton = NO; // show skip Button
-        self.window.rootViewController = newFeaturesVC;
+//        NSArray *imageNames = @[@"load1.png", @"load2.png", @"load3.png"];
+//        SRNewFeaturesViewController *newFeaturesVC = [SRNewFeaturesViewController sr_newFeatureWithImageNames:imageNames
+//                                                                                           rootViewController:tabBarControllerConfig.tabBarController];
+//        newFeaturesVC.hideSkipButton = NO; // show skip Button
+//        self.window.rootViewController = newFeaturesVC;
 //    } else {
 //        self.window.rootViewController = tabBarControllerConfig.tabBarController;
 //    }
     
     
 //    [self.window setRootViewController:tabBarControllerConfig.tabBarController];
+    
+    
+    
+    TestNetworkViewController *testNetVC = [[TestNetworkViewController alloc]initWithNibName:@"TestNetworkViewController" bundle:nil];
+    self.window.rootViewController = testNetVC;
+    
+    
     [self.window makeKeyAndVisible];
     
     // 设置导航
@@ -53,22 +62,10 @@
     // 监听网络
     [self monitorNetworkStatus];
     
-    
-    [self login];
-    
-//    NSLog(@"familyNames：%@",[UIFont familyNames]);
-    
     return YES;
 }
 
--(void)login {
-    NSDictionary *dict = @{@"userName":@"xxx",@"password":@"yyy"};
-    [[SSNetworkingManager shareManager] GET:@"app/login1" parameters:dict success:^(id _Nullable responseObject) {
-        
-    } failure:^(NSError * _Nullable error) {
-            
-    }];
-}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

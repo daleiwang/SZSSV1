@@ -15,7 +15,7 @@
     static SSNetworkingManager *manager = nil;
     static dispatch_once_t predicate;
     dispatch_once(&predicate, ^{
-        manager = [[self alloc] initWithBaseURL:[NSURL URLWithString:BASE_URL]];
+        manager = [[self alloc] initWithBaseURL:[NSURL URLWithString:URL_BASE]];
     });
     return manager;
 }
@@ -39,6 +39,10 @@
         
         /**设置可接受的类型*/
         [self.responseSerializer setAcceptableContentTypes:[NSSet setWithObjects:@"text/plain",@"application/json",@"text/json",@"text/javascript",@"text/html", nil]];
+        
+        /**设置请求和返回数据格式*/
+        self.requestSerializer = [AFHTTPRequestSerializer serializer];
+        self.responseSerializer = [AFJSONResponseSerializer serializer];
     }
     
     return self;
@@ -52,7 +56,7 @@
  *  @param success    请求成功回调
  *  @param failure    请求失败回调
  */
-- (void)GET:(NSString *)URLString parameters:(NSDictionary *)parameters success:(Success)success failure:(Failure)failure {
+- (void)SSGET:(NSString *)URLString parameters:(NSDictionary *)parameters success:(Success)success failure:(Failure)failure {
     
     SSLog(@"\n请求链接地址---> %@",URLString);
     
@@ -88,7 +92,7 @@
  *  @param success    请求成功回调
  *  @param failure    请求失败回调
  */
-- (void)POST:(NSString *)URLString parameters:(NSDictionary *)parameters success:(Success)success failure:(Failure)failure {
+- (void)SSPOST:(NSString *)URLString parameters:(NSDictionary *)parameters success:(Success)success failure:(Failure)failure {
     
     SSLog(@"\n请求链接地址---> %@",URLString);
     
@@ -126,12 +130,10 @@
  *  @param success    发送成功的回调
  *  @param failure    发送失败的回调
  */
-- (void)POST:(NSString *)URLString parameters:(NSDictionary *)parameters andPicArray:(NSArray *)picArray progress:(Progress)progress success:(Success)success failure:(Failure)failure {
+- (void)SSPOST:(NSString *)URLString parameters:(NSDictionary *)parameters andPicArray:(NSArray *)picArray progress:(Progress)progress success:(Success)success failure:(Failure)failure {
     
     SSLog(@"\n请求链接地址---> %@",URLString);
     
-    self.requestSerializer = [AFHTTPRequestSerializer serializer]; // 请求不使用AFN默认转换,保持原有数据
-    self.responseSerializer = [AFHTTPResponseSerializer serializer]; // 响应不使用AFN默认转换,保持原有数据
     [self POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
         NSInteger count = picArray.count;
@@ -186,12 +188,9 @@
  *  @param success    发送成功的回调
  *  @param failure    发送失败的回调
  */
-- (void)POST:(NSString *)URLString parameters:(NSDictionary *)parameters andPic:(SSImageModel *)picModle progress:(Progress)progress success:(Success)success failure:(Failure)failure {
+- (void)SSPOST:(NSString *)URLString parameters:(NSDictionary *)parameters andPic:(SSImageModel *)picModle progress:(Progress)progress success:(Success)success failure:(Failure)failure {
     
     SSLog(@"\n请求链接地址---> %@",URLString);
-    
-    self.requestSerializer = [AFHTTPRequestSerializer serializer]; // 请求不使用AFN默认转换,保持原有数据
-    self.responseSerializer = [AFHTTPResponseSerializer serializer]; // 响应不使用AFN默认转换,保持原有数据
     
     [self POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
@@ -207,7 +206,8 @@
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
         if (progress) {
-            progress(uploadProgress); // HDLog(@"%lf", 1.0 * uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
+            progress(uploadProgress);
+            SSLog(@"%lf", 1.0 * uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
         }
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -236,12 +236,9 @@
  *  @param success    发送成功的回调
  *  @param failure    发送失败的回调
  */
-- (void)POST:(NSString *)URLString parameters:(NSDictionary *)parameters andPicUrl:(SSImageModel *)picModle progress:(Progress)progress success:(Success)success failure:(Failure)failure {
+- (void)SSPOST:(NSString *)URLString parameters:(NSDictionary *)parameters andPicUrl:(SSImageModel *)picModle progress:(Progress)progress success:(Success)success failure:(Failure)failure {
     
     SSLog(@"\n请求链接地址---> %@",URLString);
-    
-    self.requestSerializer = [AFHTTPRequestSerializer serializer]; // 请求不使用AFN默认转换,保持原有数据
-    self.responseSerializer = [AFHTTPResponseSerializer serializer]; // 响应不使用AFN默认转换,保持原有数据
     
     [self POST:URLString parameters:parameters constructingBodyWithBlock:^(id<AFMultipartFormData>  _Nonnull formData) {
         
@@ -254,7 +251,8 @@
     } progress:^(NSProgress * _Nonnull uploadProgress) {
         
         if (progress) {
-            progress(uploadProgress); // HDLog(@"%lf", 1.0 * uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
+            progress(uploadProgress);
+            SSLog(@"%lf", 1.0 * uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
         }
         
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -282,8 +280,7 @@
  *  @param downLoadSuccess 发送成功的回调
  *  @param failure         发送失败的回调
  */
-- (NSURLSessionDownloadTask *)downLoadWithURL:(NSString *)URLString progress:(Progress)progress destination:(Destination)destination downLoadSuccess:(DownLoadSuccess)downLoadSuccess failure:(Failure)failure {
-    
+- (NSURLSessionDownloadTask *)SSdownLoadWithURL:(NSString *)URLString progress:(Progress)progress destination:(Destination)destination downLoadSuccess:(DownLoadSuccess)downLoadSuccess failure:(Failure)failure {
     
     SSLog(@"\n请求链接地址---> %@",URLString);
     
@@ -295,7 +292,8 @@
     NSURLSessionDownloadTask *task = [self downloadTaskWithRequest:request progress:^(NSProgress * _Nonnull downloadProgress) {
         
         if (progress) {
-            progress(downloadProgress); // HDLog(@"%lf", 1.0 * uploadProgress.completedUnitCount / uploadProgress.totalUnitCount);
+            progress(downloadProgress);
+            SSLog(@"%lf", 1.0 * downloadProgress.completedUnitCount / downloadProgress.totalUnitCount);
         }
         
     } destination:^NSURL * _Nonnull(NSURL * _Nonnull targetPath, NSURLResponse * _Nonnull response) {
@@ -322,11 +320,6 @@
     
     return task;
 }
-
-
-
-
-
 
 
 @end

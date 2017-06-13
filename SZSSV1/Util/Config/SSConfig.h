@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#define BASE_URL @"http://localhost:8080/moxi-0.0.1-SNAPSHOT/"
+#define URL_BASE @"http://localhost:8080/moxi-0.0.1-SNAPSHOT/"
 
 
 

@@ -8,4 +8,5 @@ pod 'CYLTabBarController', '1.10.0'
 pod 'VTMagic'
 pod 'Masonry'
 pod 'YYModel'
+
 end

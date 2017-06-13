@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TestNetworkViewController">
+            <connections>
+                <outlet property="imageVC" destination="lzs-g2-HhU" id="8Bh-j0-8eN"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xm-KB-YeJ">
+                    <rect key="frame" x="60" y="60" width="255" height="30"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="GET"/>
+                    <connections>
+                        <action selector="GET:" destination="-1" eventType="touchUpInside" id="3h4-Bq-UZn"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXN-RO-YAB">
+                    <rect key="frame" x="60" y="115" width="255" height="30"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="POST"/>
+                    <connections>
+                        <action selector="POST:" destination="-1" eventType="touchUpInside" id="NCa-3Z-CBd"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bed-ps-eV5">
+                    <rect key="frame" x="60" y="170" width="255" height="30"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="UPLOAD"/>
+                    <connections>
+                        <action selector="UPLOAD:" destination="-1" eventType="touchUpInside" id="C8o-Ph-e6I"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p23-6y-Z6J">
+                    <rect key="frame" x="60" y="225" width="255" height="30"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="UPLOADS"/>
+                    <connections>
+                        <action selector="UPLOADS:" destination="-1" eventType="touchUpInside" id="mg4-Sf-daI"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fRe-p5-skC">
+                    <rect key="frame" x="60" y="280" width="255" height="30"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="UPLOADURL"/>
+                    <connections>
+                        <action selector="UPLOADURL:" destination="-1" eventType="touchUpInside" id="5kd-5k-t7B"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ewq-3C-4ae">
+                    <rect key="frame" x="60" y="335" width="255" height="30"/>
+                    <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="DOWNLOAD"/>
+                    <connections>
+                        <action selector="DOWNLOAD:" destination="-1" eventType="touchUpInside" id="9Ya-vd-7Hq"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lzs-g2-HhU">
+                    <rect key="frame" x="67" y="385" width="240" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="oUX-bJ-kV0"/>
+                        <constraint firstAttribute="width" constant="240" id="zRp-Ec-u8z"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Ewq-3C-4ae" firstAttribute="top" secondItem="fRe-p5-skC" secondAttribute="bottom" constant="25" id="1f9-WS-dfd"/>
+                <constraint firstItem="p23-6y-Z6J" firstAttribute="height" secondItem="bed-ps-eV5" secondAttribute="height" id="3ym-0c-Z7d"/>
+                <constraint firstItem="PXN-RO-YAB" firstAttribute="centerX" secondItem="4Xm-KB-YeJ" secondAttribute="centerX" id="8gb-GP-e0J"/>
+                <constraint firstItem="4Xm-KB-YeJ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="60" id="8re-q5-MUR"/>
+                <constraint firstItem="p23-6y-Z6J" firstAttribute="top" secondItem="bed-ps-eV5" secondAttribute="bottom" constant="25" id="MFo-go-Bkq"/>
+                <constraint firstItem="fRe-p5-skC" firstAttribute="top" secondItem="p23-6y-Z6J" secondAttribute="bottom" constant="25" id="OaZ-hD-UIe"/>
+                <constraint firstItem="bed-ps-eV5" firstAttribute="centerX" secondItem="PXN-RO-YAB" secondAttribute="centerX" id="RJO-ig-z7w"/>
+                <constraint firstItem="4Xm-KB-YeJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="60" id="Sz7-O5-gB7"/>
+                <constraint firstItem="bed-ps-eV5" firstAttribute="top" secondItem="PXN-RO-YAB" secondAttribute="bottom" constant="25" id="T8Y-4L-Q4q"/>
+                <constraint firstItem="lzs-g2-HhU" firstAttribute="centerX" secondItem="Ewq-3C-4ae" secondAttribute="centerX" id="VBt-oS-LR6"/>
+                <constraint firstItem="PXN-RO-YAB" firstAttribute="top" secondItem="4Xm-KB-YeJ" secondAttribute="bottom" constant="25" id="Wyv-kd-BKl"/>
+                <constraint firstItem="Ewq-3C-4ae" firstAttribute="width" secondItem="fRe-p5-skC" secondAttribute="width" id="YVc-wh-Tzn"/>
+                <constraint firstItem="p23-6y-Z6J" firstAttribute="centerX" secondItem="bed-ps-eV5" secondAttribute="centerX" id="aVw-i9-V1C"/>
+                <constraint firstItem="PXN-RO-YAB" firstAttribute="height" secondItem="4Xm-KB-YeJ" secondAttribute="height" id="b5Q-rA-elZ"/>
+                <constraint firstItem="fRe-p5-skC" firstAttribute="width" secondItem="p23-6y-Z6J" secondAttribute="width" id="eo8-if-UQV"/>
+                <constraint firstItem="p23-6y-Z6J" firstAttribute="width" secondItem="bed-ps-eV5" secondAttribute="width" id="gEa-67-8CJ"/>
+                <constraint firstItem="bed-ps-eV5" firstAttribute="height" secondItem="PXN-RO-YAB" secondAttribute="height" id="nEH-RO-DzU"/>
+                <constraint firstItem="fRe-p5-skC" firstAttribute="height" secondItem="p23-6y-Z6J" secondAttribute="height" id="ppb-Xc-2l8"/>
+                <constraint firstItem="fRe-p5-skC" firstAttribute="centerX" secondItem="p23-6y-Z6J" secondAttribute="centerX" id="qsZ-6x-HKC"/>
+                <constraint firstItem="Ewq-3C-4ae" firstAttribute="height" secondItem="fRe-p5-skC" secondAttribute="height" id="u7g-Zc-0GV"/>
+                <constraint firstItem="bed-ps-eV5" firstAttribute="width" secondItem="PXN-RO-YAB" secondAttribute="width" id="uAl-8l-egx"/>
+                <constraint firstItem="lzs-g2-HhU" firstAttribute="top" secondItem="Ewq-3C-4ae" secondAttribute="bottom" constant="20" id="vY3-hG-Mfy"/>
+                <constraint firstAttribute="trailing" secondItem="4Xm-KB-YeJ" secondAttribute="trailing" constant="60" id="wEX-Fq-HOi"/>
+                <constraint firstItem="Ewq-3C-4ae" firstAttribute="centerX" secondItem="fRe-p5-skC" secondAttribute="centerX" id="zPJ-Na-d4V"/>
+                <constraint firstItem="PXN-RO-YAB" firstAttribute="width" secondItem="4Xm-KB-YeJ" secondAttribute="width" id="zzZ-qM-0Uv"/>
+            </constraints>
+            <point key="canvasLocation" x="34.5" y="53.5"/>
+        </view>
+    </objects>
+</document>
